@@ -44,7 +44,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm mb-6"
             >
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-xs font-bold text-slate-600 tracking-wide uppercase">Partner Terpercaya Sejak 2008</span>
+              <span className="text-xs font-bold text-slate-600 tracking-wide uppercase">Partner Terpercaya Sejak 2019</span>
             </motion.div>
 
             <motion.h1
@@ -102,14 +102,23 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* PARTNERS STRIP */}
-          <div className="mt-16 md:mt-24 pt-6 md:pt-10 border-t border-slate-100">
-            <p className="text-xs md:text-sm font-semibold text-slate-400 uppercase tracking-widest mb-6 md:mb-8 text-center md:text-left">Dipercaya Oleh</p>
-            <div className="flex flex-wrap justify-center md:justify-start gap-x-8 gap-y-4 opacity-70 md:opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-              <div className="flex items-center gap-2"><Building2 className="w-5 h-5 md:w-6 md:h-6" /> <span className="font-bold text-sm md:text-lg">Dinas PU</span></div>
-              <div className="flex items-center gap-2"><HardHat className="w-5 h-5 md:w-6 md:h-6" /> <span className="font-bold text-sm md:text-lg">Pemprov Kaltim</span></div>
-              <div className="flex items-center gap-2"><Trophy className="w-5 h-5 md:w-6 md:h-6" /> <span className="font-bold text-sm md:text-lg">Kementerian PUPR</span></div>
-              <div className="flex items-center gap-2"><Users className="w-5 h-5 md:w-6 md:h-6" /> <span className="font-bold text-sm md:text-lg">Swasta Nasional</span></div>
+          {/* PARTNERS STRIP - CREATIVE REDESIGN */}
+          <div className="mt-16 md:mt-32 pt-10 border-t border-slate-100/50">
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-8 text-center">Dipercaya Oleh Institusi & Swasta</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                { name: "Dinas PU", icon: Building2 },
+                { name: "Pemprov Kaltim", icon: HardHat },
+                { name: "Kementerian PUPR", icon: Trophy },
+                { name: "Swasta Nasional", icon: Users },
+              ].map((partner) => (
+                <div key={partner.name} className="group flex flex-col items-center justify-center p-6 rounded-3xl bg-slate-50/50 border border-slate-100 hover:bg-white hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-500 cursor-default">
+                  <div className="mb-3 p-3 rounded-full bg-white shadow-sm text-slate-400 group-hover:text-emerald-500 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                    <partner.icon className="w-6 h-6" />
+                  </div>
+                  <span className="font-bold text-slate-500 group-hover:text-slate-900 transition-colors text-sm text-center">{partner.name}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>

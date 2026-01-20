@@ -353,7 +353,7 @@ export default function Home() {
               {/* Project Card 1 */}
               <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
                 <Image
-                  src="/assets/project-rural.png"
+                  src="/assets/hero-gen-bridge.png"
                   alt="Terusan Salimbatu"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -371,7 +371,7 @@ export default function Home() {
               {/* Project Card 2 */}
               <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer md:mt-12">
                 <Image
-                  src="/assets/project-1.png"
+                  src="/assets/hero-gen-road.png"
                   alt="Akses Teras Baru"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -389,7 +389,7 @@ export default function Home() {
               {/* Project Card 3 */}
               <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
                 <Image
-                  src="/assets/hero-rural.png"
+                  src="/assets/hero-gen-aerial.png"
                   alt="Drainase Kota"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"

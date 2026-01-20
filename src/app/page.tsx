@@ -319,8 +319,8 @@ export default function Home() {
               <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-amber-50 flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Trophy className="w-8 h-8 md:w-10 md:h-10 text-amber-500 drop-shadow-sm" />
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-1">58+</div>
-              <p className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Proyek Sukses</p>
+              <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-1">3</div>
+              <p className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Sertifikasi ISO</p>
             </div>
 
           </div>
@@ -523,7 +523,7 @@ export default function Home() {
             <div className="space-y-4 md:space-y-6">
               <h4 className="font-bold text-sm md:text-base text-slate-900">Kontak</h4>
               <div className="text-slate-500 space-y-2 text-xs md:text-lg">
-                <p className="hover:text-emerald-600 cursor-pointer transition-colors">admin@kidnusagemilang.com</p>
+                <p className="hover:text-emerald-600 cursor-pointer transition-colors">kidnusagemilang@gmail.com</p>
                 <p className="hover:text-emerald-600 cursor-pointer transition-colors">+62 (542) 123-4567</p>
               </div>
             </div>

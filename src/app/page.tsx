@@ -353,17 +353,17 @@ export default function Home() {
               {/* Project Card 1 */}
               <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
                 <Image
-                  src="/assets/hero-gen-bridge.png"
-                  alt="Terusan Salimbatu"
+                  src="/assets/project-sei-kayan.png"
+                  alt="Jembatan Sei Kayan"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
                 <div className="absolute bottom-0 left-0 p-4 md:p-8 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="text-emerald-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1 md:mb-2">Jembatan Gantung</div>
-                  <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2 leading-tight">Terusan Salimbatu</h3>
+                  <div className="text-emerald-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1 md:mb-2">Infrastruktur Jembatan</div>
+                  <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2 leading-tight">Jembatan Sei Kayan</h3>
                   <p className="text-slate-300 text-xs md:text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 hidden md:block">
-                    Pembangunan akses vital penghubung desa dengan bentang 120 meter.
+                    Pembangunan jembatan beton vital melintasi sungai lebar untuk konektivitas wilayah.
                   </p>
                 </div>
               </div>
@@ -371,17 +371,17 @@ export default function Home() {
               {/* Project Card 2 */}
               <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer md:mt-12">
                 <Image
-                  src="/assets/hero-gen-road.png"
-                  alt="Akses Teras Baru"
+                  src="/assets/project-jalan-tambang.png"
+                  alt="Akses Jalan Tambang"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
                 <div className="absolute bottom-0 left-0 p-4 md:p-8 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="text-emerald-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1 md:mb-2">Infrastruktur Jalan</div>
-                  <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2 leading-tight">Akses Teras Baru</h3>
+                  <div className="text-emerald-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1 md:mb-2">Haul Road</div>
+                  <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2 leading-tight">Akses Jalan Tambang</h3>
                   <p className="text-slate-300 text-xs md:text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 hidden md:block">
-                    Peningkatan kualitas jalan poros utama untuk mobilitas ekonomi warga.
+                    Peningkatan kualitas jalan akses tambang untuk mendukung logistik alat berat.
                   </p>
                 </div>
               </div>
@@ -389,32 +389,53 @@ export default function Home() {
               {/* Project Card 3 */}
               <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
                 <Image
-                  src="/assets/hero-gen-aerial.png"
-                  alt="Drainase Kota"
+                  src="/assets/project-belly.png"
+                  alt="Supply Rangka Belly"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
                 <div className="absolute bottom-0 left-0 p-4 md:p-8 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="text-emerald-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1 md:mb-2">Konstruksi Sipil</div>
-                  <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2 leading-tight">Drainase Kota</h3>
+                  <div className="text-emerald-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1 md:mb-2">Logistik Konstruksi</div>
+                  <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2 leading-tight">Supply Rangka Belly</h3>
                   <p className="text-slate-300 text-xs md:text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 hidden md:block">
-                    Sistem pengendalian banjir terintegrasi kawasan pemukiman padat.
+                    Pengadaan dan distribusi struktur jembatan baja ke lokasi project terpencil.
                   </p>
                 </div>
               </div>
 
-              {/* Project Card 4 (Placeholder / More) */}
-              <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer bg-slate-200 border border-slate-300 flex items-center justify-center md:mt-12 group hover:bg-slate-300 transition-colors">
-                <div className="text-center p-2">
-                  <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center mx-auto mb-2 md:mb-4 text-slate-400 group-hover:text-emerald-500 group-hover:scale-110 transition-all shadow-sm">
-                    <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
-                  </div>
-                  <h3 className="text-sm md:text-lg font-bold text-slate-500 group-hover:text-slate-900 transition-colors">Lihat Lainnya</h3>
+              {/* Project Card 4 */}
+              <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
+                <Image
+                  src="/assets/project-site-office.png"
+                  alt="Kantor Operasional Site"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                <div className="absolute bottom-0 left-0 p-4 md:p-8 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="text-emerald-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1 md:mb-2">Fasilitas Pendukung</div>
+                  <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2 leading-tight">Kantor Operasional Site</h3>
+                  <p className="text-slate-300 text-xs md:text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 hidden md:block">
+                    Pembangunan fasilitas kantor lapangan fungsional di area remote.
+                  </p>
                 </div>
-                <Link href="/projects" className="absolute inset-0 z-10" aria-label="Lihat Semua Project" />
               </div>
+              <p className="text-slate-300 text-xs md:text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 hidden md:block">
+                Sistem pengendalian banjir terintegrasi kawasan pemukiman padat.
+              </p>
             </div>
+          </div>
+
+          {/* Project Card 4 (Placeholder / More) */}
+          <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer bg-slate-200 border border-slate-300 flex items-center justify-center md:mt-12 group hover:bg-slate-300 transition-colors">
+            <div className="text-center p-2">
+              <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center mx-auto mb-2 md:mb-4 text-slate-400 group-hover:text-emerald-500 group-hover:scale-110 transition-all shadow-sm">
+                <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
+              </div>
+              <h3 className="text-sm md:text-lg font-bold text-slate-500 group-hover:text-slate-900 transition-colors">Lihat Lainnya</h3>
+            </div>
+            <Link href="/projects" className="absolute inset-0 z-10" aria-label="Lihat Semua Project" />
           </div>
         </div>
       </section>

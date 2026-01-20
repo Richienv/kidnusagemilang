@@ -18,7 +18,7 @@ const projects = [
         category: "Jembatan",
         location: "Kalimantan Utara",
         year: "2025",
-        image: "/assets/project-rural.png",
+        image: "/assets/hero-gen-bridge.png",
         desc: "Pembangunan jembatan gantung vital penghubung desa terisolir."
     },
     {
@@ -27,7 +27,7 @@ const projects = [
         category: "Jalan",
         location: "Bulungan",
         year: "2024",
-        image: "/assets/project-1.png",
+        image: "/assets/hero-gen-road.png",
         desc: "Peningkatan kualitas jalan dan sistem drainase lingkungan."
     },
     {
@@ -36,7 +36,7 @@ const projects = [
         category: "Sipil",
         location: "Kalimantan Timur",
         year: "2024",
-        image: "/assets/hero-bg.png", // Fallback/Placeholder
+        image: "/assets/project-belly.png",
         desc: "Pengadaan dan pemasangan rangka baja jembatan darurat."
     },
     {
@@ -45,7 +45,7 @@ const projects = [
         category: "Jembatan",
         location: "Tanjung Selor",
         year: "2023",
-        image: "/assets/hero-rural.png",
+        image: "/assets/project-sei-kayan.png",
         desc: "Konstruksi jembatan bentang panjang rangka baja."
     },
     {
@@ -54,7 +54,7 @@ const projects = [
         category: "Jalan",
         location: "Berau",
         year: "2023",
-        image: "/assets/project-1.png",
+        image: "/assets/project-jalan-tambang.png",
         desc: "Pengerasan dan stabilisasi tanah untuk akses alat berat."
     },
     {
@@ -63,7 +63,7 @@ const projects = [
         category: "Sipil",
         location: "Balikpapan",
         year: "2022",
-        image: "/assets/hero-bg.png",
+        image: "/assets/project-site-office.png",
         desc: "Pembangunan fasilitas kantor lapangan semi-permanen."
     }
 ]
@@ -100,8 +100,8 @@ export default function ProjectsPage() {
                             key={cat}
                             onClick={() => setFilter(cat)}
                             className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === cat
-                                    ? "bg-emerald-600 text-white shadow-md transform scale-105"
-                                    : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200"
+                                ? "bg-emerald-600 text-white shadow-md transform scale-105"
+                                : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200"
                                 }`}
                         >
                             {cat}

@@ -343,7 +343,7 @@ export default function Home() {
               <p className="text-sm md:text-lg text-slate-600 mb-6 md:mb-8 leading-relaxed font-light">
                 Bukti nyata dedikasi kami dalam membangun infrastruktur berkualitas di berbagai medan menantang, dari pedesaan hingga perkotaan.
               </p>
-              <Button asChild size="lg" className="rounded-full bg-slate-900 text-white hover:bg-slate-800 px-6 md:px-8 h-10 md:h-12 text-sm md:text-base">
+              <Button asChild size="lg" className="rounded-full bg-slate-900 text-white hover:bg-slate-800 px-4 md:px-8 h-8 md:h-12 text-xs md:text-base shadow-sm">
                 <Link href="/projects">Lihat Semua Portfolio <ArrowRight className="ml-2 w-3 h-3 md:w-4 md:h-4" /></Link>
               </Button>
             </div>

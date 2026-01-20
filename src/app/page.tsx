@@ -83,19 +83,19 @@ export default function Home() {
             className="mt-12 md:mt-24 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 max-w-7xl mx-auto px-2 md:px-0"
           >
             <div className="relative aspect-[4/5] md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-500 col-span-2 md:col-span-1">
-              <Image src="/assets/hero-real-2.png" alt="Jembatan Salimbatu" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/assets/hero-gen-bridge.png" alt="Jembatan Salimbatu" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
                 <span className="text-white font-medium text-sm md:text-base">Jembatan Salimbatu</span>
               </div>
             </div>
             <div className="relative aspect-[4/5] md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden md:translate-y-12 group shadow-2xl transition-all duration-500 border-2 md:border-4 border-white">
-              <Image src="/assets/hero-real-1.jpg" alt="Akses Teras Baru" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/assets/hero-gen-road.png" alt="Akses Teras Baru" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
                 <span className="text-white font-medium text-sm md:text-base">Akses Teras Baru</span>
               </div>
             </div>
             <div className="relative aspect-[4/5] md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg transition-all duration-500">
-              <Image src="/assets/hero-real-3.jpg" alt="Konstruksi Wilayah" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/assets/hero-gen-aerial.png" alt="Konstruksi Wilayah" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
                 <span className="text-white font-medium text-sm md:text-base">Konstruksi Wilayah</span>
               </div>

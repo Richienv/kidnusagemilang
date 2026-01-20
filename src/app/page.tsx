@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Building2, CheckCircle2, HardHat, Leaf, MapPin, Menu, Phone, Trophy, Users, ShieldCheck, FileCheck } from "lucide-react"
+import { ArrowRight, Building2, CheckCircle2, HardHat, Leaf, MapPin, Menu, Phone, Trophy, Users, ShieldCheck, FileCheck, Landmark, Pickaxe, Briefcase } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -103,20 +103,19 @@ export default function Home() {
           </motion.div>
 
           {/* PARTNERS STRIP - CREATIVE REDESIGN */}
-          <div className="mt-16 md:mt-32 pt-10 border-t border-slate-100/50">
-            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-8 text-center">Dipercaya Oleh Institusi & Swasta</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {/* TRUSTED PARTNERS - "Ecosystem Grid" (Minimalist Tech Style) */}
+          <div className="mt-24 pt-10 border-t border-slate-100">
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-10 text-center">Dipercaya Oleh Institusi & Swasta</p>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-slate-200 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
               {[
-                { name: "Dinas PU", icon: Building2 },
-                { name: "Pemprov Kaltim", icon: HardHat },
-                { name: "Kementerian PUPR", icon: Trophy },
-                { name: "Swasta Nasional", icon: Users },
-              ].map((partner) => (
-                <div key={partner.name} className="group flex flex-col items-center justify-center p-6 rounded-3xl bg-slate-50/50 border border-slate-100 hover:bg-white hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-500 cursor-default">
-                  <div className="mb-3 p-3 rounded-full bg-white shadow-sm text-slate-400 group-hover:text-emerald-500 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                    <partner.icon className="w-6 h-6" />
-                  </div>
-                  <span className="font-bold text-slate-500 group-hover:text-slate-900 transition-colors text-sm text-center">{partner.name}</span>
+                { name: "Kementerian PUPR", icon: Landmark },
+                { name: "Dinas PU Kaltim", icon: Building2 },
+                { name: "Korporasi Tambang", icon: Pickaxe },
+                { name: "Swasta Nasional", icon: Briefcase },
+              ].map((partner, i) => (
+                <div key={i} className="bg-white p-6 md:p-10 flex flex-col items-center justify-center gap-4 hover:bg-slate-50 transition-colors group cursor-default">
+                  <partner.icon className="w-8 h-8 text-slate-300 group-hover:text-slate-900 transition-colors" strokeWidth={1.5} />
+                  <span className="text-sm font-semibold text-slate-500 group-hover:text-slate-900 transition-colors tracking-tight text-center">{partner.name}</span>
                 </div>
               ))}
             </div>
@@ -194,57 +193,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CERTIFICATIONS SECTION - NEW */}
-      <section className="py-12 md:py-24 bg-white border-y border-slate-100">
+      {/* CERTIFICATIONS SECTION - "Technical Compliance Grid" */}
+      <section className="py-20 md:py-32 bg-slate-50 border-y border-slate-200">
         <div className="container px-4 mx-auto max-w-7xl">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-8 md:mb-12 gap-6">
-            <div className="max-w-2xl">
-              <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-2 md:mb-4">Standar & Sertifikasi</h2>
-              <p className="text-base md:text-lg text-slate-500 font-light">
-                Komitmen mutu melalui sertifikasi internasional dan lisensi resmi.
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
+            <div className="max-w-xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Standar & Kepatuhan</h2>
+              <p className="text-slate-500 text-lg font-light leading-relaxed">
+                Sistem manajemen terintegrasi yang telah diaudit dan divalidasi oleh badan sertifikasi internasional.
               </p>
             </div>
-            <div className="flex gap-2">
-              <div className="px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-slate-50 border border-slate-200 text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest">
-                Verified 2026
+            <div className="flex items-center gap-3">
+              <div className="px-4 py-2 bg-white border border-slate-200 rounded-md shadow-sm flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                <span className="text-xs font-mono font-medium text-slate-600">ISO CERTIFIED // ACTIVE</span>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 border-t border-l border-slate-200 bg-white shadow-sm">
             {[
               {
-                code: "ISO 9001",
-                name: "Quality",
-                desc: "Mutu Layanan",
-                icon: <Trophy className="w-5 h-5 md:w-6 md:h-6 text-emerald-600" />
+                code: "ISO 9001:2015",
+                name: "Quality Management",
+                desc: "Jaminan mutu layanan konstruksi & kepuasan klien."
               },
               {
-                code: "ISO 14001",
-                name: "Environment",
-                desc: "Lingkungan",
-                icon: <Leaf className="w-5 h-5 md:w-6 md:h-6 text-emerald-600" />
+                code: "ISO 14001:2015",
+                name: "Environmental",
+                desc: "Manajemen dampak lingkungan yang berkelanjutan."
               },
               {
-                code: "ISO 45001",
-                name: "K3 Safety",
-                desc: "Keselamatan",
-                icon: <ShieldCheck className="w-5 h-5 md:w-6 md:h-6 text-emerald-600" />
+                code: "ISO 45001:2018",
+                name: "Occupational Safety",
+                desc: "Standar keselamatan & kesehatan kerja (K3) level internasional."
               },
               {
                 code: "SBU & NIB",
-                name: "Lisensi",
-                desc: "Izin Resmi",
-                icon: <FileCheck className="w-5 h-5 md:w-6 md:h-6 text-emerald-600" />
+                name: "License & Compliance",
+                desc: "Izin usaha konstruksi resmi dan terverifikasi pemerintah."
               }
             ].map((cert, idx) => (
-              <div key={idx} className="group p-4 md:p-6 rounded-2xl md:rounded-[2rem] bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:shadow-lg transition-all duration-300">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white shadow-sm flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform">
-                  {cert.icon}
+              <div key={idx} className="group p-8 border-b border-r border-slate-200 hover:bg-slate-50/80 transition-all duration-300 relative overflow-hidden">
+                <div className="font-mono text-xs font-bold text-emerald-600 mb-4 tracking-wider">{cert.code}</div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-800 transition-colors">{cert.name}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed mb-8 font-light">{cert.desc}</p>
+
+                <div className="absolute bottom-8 left-8 flex items-center gap-2 text-[10px] font-bold text-slate-300 group-hover:text-emerald-600 transition-colors uppercase tracking-widest">
+                  <CheckCircle2 className="w-3 h-3" /> Verified
                 </div>
-                <div className="text-[10px] md:text-xs font-bold text-emerald-600 uppercase tracking-wider mb-1 md:mb-2">{cert.code}</div>
-                <h3 className="text-sm md:text-lg font-bold text-slate-900 mb-1 md:mb-2">{cert.name}</h3>
-                <p className="text-xs md:text-sm text-slate-500 leading-relaxed">{cert.desc}</p>
               </div>
             ))}
           </div>

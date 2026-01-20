@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Building2, CheckCircle2, HardHat, Leaf, MapPin, Menu, Phone, Trophy, Users, ShieldCheck, FileCheck, Landmark, Pickaxe, Briefcase } from "lucide-react"
+import { ArrowRight, Building2, CheckCircle2, HardHat, Leaf, MapPin, Menu, Phone, Trophy, Users, ShieldCheck, FileCheck, Landmark, Pickaxe, Briefcase, Timer } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -338,13 +338,14 @@ export default function Home() {
               <p className="text-xs md:text-sm text-slate-500">Tenaga profesional bersertifikat dengan pengalaman &gt;10 tahun.</p>
             </div>
 
-            {/* Bento Item 4: Stats - "Trophy Emphasis" */}
-            <div className="md:col-span-1 md:row-span-1 bg-slate-50 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-8 flex flex-col items-center justify-center text-center border border-slate-100 hover:shadow-lg transition-all duration-300 group">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-amber-50 flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Trophy className="w-8 h-8 md:w-10 md:h-10 text-amber-500 drop-shadow-sm" />
+            {/* Bento Item 4: Time Value - "Precision" */}
+            <div className="md:col-span-1 md:row-span-1 bg-slate-900 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-8 flex flex-col items-center justify-center text-center border border-slate-800 hover:shadow-xl hover:shadow-emerald-900/20 transition-all duration-300 group relative overflow-hidden">
+              <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/5 flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300 backdrop-blur-sm border border-white/10">
+                <Timer className="w-8 h-8 md:w-10 md:h-10 text-emerald-400" />
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-1">3</div>
-              <p className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Sertifikasi ISO</p>
+              <div className="text-xl md:text-2xl font-bold text-white mb-1">On-Time</div>
+              <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest group-hover:text-emerald-400 transition-colors">Jaminan Ketepatan</p>
             </div>
 
           </div>
@@ -358,121 +359,105 @@ export default function Home() {
 
             {/* Left Content (Sticky) */}
             <div className="lg:col-span-2 lg:sticky lg:top-32">
-              <div className="inline-block px-3 py-1 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-700 text-xs md:text-sm font-bold mb-4 md:mb-6">
-                Portfolio Unggulan
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-md shadow-sm mb-6 md:mb-8">
+                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                <span className="text-[10px] md:text-xs font-mono font-bold text-slate-600 tracking-widest uppercase">Featured Projects // 2024-2025</span>
               </div>
-              <h2 className="text-2xl md:text-5xl font-bold text-slate-900 mb-4 md:mb-6 leading-tight">
-                Project Yang Sudah Kami Kerjakan
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
+                Rekam Jejak <br /> <span className="text-slate-400">Infrastruktur.</span>
               </h2>
-              <p className="text-sm md:text-lg text-slate-600 mb-6 md:mb-8 leading-relaxed font-light">
+              <p className="text-sm md:text-lg text-slate-600 mb-8 leading-relaxed font-light max-w-md">
                 Bukti nyata dedikasi kami dalam membangun infrastruktur berkualitas di berbagai medan menantang, dari pedesaan hingga perkotaan.
               </p>
-              <Button asChild size="lg" className="rounded-full bg-slate-900 text-white hover:bg-slate-800 px-4 md:px-8 h-8 md:h-12 text-xs md:text-base shadow-sm">
-                <Link href="/projects">Lihat Semua Portfolio <ArrowRight className="ml-2 w-3 h-3 md:w-4 md:h-4" /></Link>
+              <Button asChild size="lg" className="rounded-full bg-slate-900 text-white hover:bg-slate-800 px-6 md:px-8 h-10 md:h-12 text-xs md:text-sm font-medium shadow-sm hover:shadow-md transition-all">
+                <Link href="/projects">Lihat Semua Portfolio <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
             </div>
 
             {/* Right Grid (Bento Style Projects) */}
             <div className="lg:col-span-3 grid grid-cols-2 gap-3 md:gap-6">
-              {/* Project Card 1 */}
-              <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
-                <Image
-                  src="/assets/project-sei-kayan.png"
-                  alt="Jembatan Sei Kayan"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                <div className="absolute bottom-0 left-0 p-4 md:p-8 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="text-emerald-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1 md:mb-2">Infrastruktur Jembatan</div>
-                  <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2 leading-tight">Jembatan Sei Kayan</h3>
-                  <p className="text-slate-300 text-xs md:text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 hidden md:block">
-                    Pembangunan jembatan beton vital melintasi sungai lebar untuk konektivitas wilayah.
-                  </p>
-                </div>
-              </div>
+              {[
+                {
+                  id: "01",
+                  title: "Jembatan Sei Kayan",
+                  cat: "Bridge Infrastructure",
+                  desc: "Pembangunan jembatan beton vital melintasi sungai lebar untuk konektivitas wilayah.",
+                  img: "/assets/project-sei-kayan.png"
+                },
+                {
+                  id: "02",
+                  title: "Akses Jalan Tambang",
+                  cat: "Haul Road Access",
+                  desc: "Peningkatan kualitas jalan akses tambang untuk mendukung logistik alat berat.",
+                  img: "/assets/project-jalan-tambang.png",
+                  className: "md:mt-12"
+                },
+                {
+                  id: "03",
+                  title: "Supply Rangka Belly",
+                  cat: "Logistic & Supply",
+                  desc: "Pengadaan dan distribusi struktur jembatan baja ke lokasi project terpencil.",
+                  img: "/assets/project-belly.png"
+                },
+                {
+                  id: "04",
+                  title: "Kantor Operasional Site",
+                  cat: "Supporting Facility",
+                  desc: "Pembangunan fasilitas kantor lapangan fungsional di area remote.",
+                  img: "/assets/project-site-office.png"
+                },
+              ].map((project) => (
+                <div key={project.id} className={`group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer bg-slate-900 ${project.className || ''}`}>
+                  <Image
+                    src={project.img}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100 layer-blur"
+                  />
 
-              {/* Project Card 2 */}
-              <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer md:mt-12">
-                <Image
-                  src="/assets/project-jalan-tambang.png"
-                  alt="Akses Jalan Tambang"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                <div className="absolute bottom-0 left-0 p-4 md:p-8 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="text-emerald-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1 md:mb-2">Haul Road</div>
-                  <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2 leading-tight">Akses Jalan Tambang</h3>
-                  <p className="text-slate-300 text-xs md:text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 hidden md:block">
-                    Peningkatan kualitas jalan akses tambang untuk mendukung logistik alat berat.
-                  </p>
-                </div>
-              </div>
+                  {/* Technical Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
 
-              {/* Project Card 3 */}
-              <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
-                <Image
-                  src="/assets/project-belly.png"
-                  alt="Supply Rangka Belly"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                <div className="absolute bottom-0 left-0 p-4 md:p-8 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="text-emerald-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1 md:mb-2">Logistik Konstruksi</div>
-                  <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2 leading-tight">Supply Rangka Belly</h3>
-                  <p className="text-slate-300 text-xs md:text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 hidden md:block">
-                    Pengadaan dan distribusi struktur jembatan baja ke lokasi project terpencil.
-                  </p>
-                </div>
-              </div>
+                  {/* ID Tag */}
+                  <div className="absolute top-3 right-3 md:top-6 md:right-6 px-2 py-1 bg-black/30 backdrop-blur-md border border-white/10 text-white/70 text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-[-10px] group-hover:translate-y-0">
+                    PRJ-{project.id} // KNG
+                  </div>
 
-              {/* Project Card 4 */}
-              <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
-                <Image
-                  src="/assets/project-site-office.png"
-                  alt="Kantor Operasional Site"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                <div className="absolute bottom-0 left-0 p-4 md:p-8 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="text-emerald-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1 md:mb-2">Fasilitas Pendukung</div>
-                  <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2 leading-tight">Kantor Operasional Site</h3>
-                  <p className="text-slate-300 text-xs md:text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 hidden md:block">
-                    Pembangunan fasilitas kantor lapangan fungsional di area remote.
-                  </p>
+                  <div className="absolute bottom-0 left-0 p-4 md:p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out w-full">
+                    <div className="w-8 h-[2px] bg-emerald-500 mb-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div className="text-emerald-400 font-mono text-[10px] md:text-xs font-medium uppercase tracking-widest mb-2">{project.cat}</div>
+                    <h3 className="text-lg md:text-2xl font-bold text-white mb-2 leading-tight">{project.title}</h3>
+                    <p className="text-slate-300 text-xs md:text-sm line-clamp-2 font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 hidden md:block">
+                      {project.desc}
+                    </p>
+                  </div>
                 </div>
+              ))}
+
+              {/* Project Card (See All) - Desktop Only */}
+              <div className="hidden md:flex group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer bg-slate-100 border border-slate-200 items-center justify-center md:mt-12 hover:bg-slate-200/50 hover:border-slate-300 transition-all duration-300">
+                <div className="text-center p-2">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white border border-slate-100 flex items-center justify-center mx-auto mb-4 text-slate-400 group-hover:text-emerald-600 group-hover:scale-110 shadow-sm transition-all duration-500">
+                    <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
+                  </div>
+                  <h3 className="text-sm md:text-base font-bold text-slate-500 group-hover:text-slate-900 transition-colors tracking-tight">View All Projects</h3>
+                </div>
+                <Link href="/projects" className="absolute inset-0 z-10" aria-label="Lihat Semua Project" />
               </div>
-              <p className="text-slate-300 text-xs md:text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 hidden md:block">
-                Sistem pengendalian banjir terintegrasi kawasan pemukiman padat.
-              </p>
             </div>
-          </div>
 
-          {/* Project Card 4 (Placeholder / More) - Desktop Only */}
-          <div className="hidden md:flex group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer bg-slate-200 border border-slate-300 items-center justify-center md:mt-12 group hover:bg-slate-300 transition-colors">
-            <div className="text-center p-2">
-              <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center mx-auto mb-2 md:mb-4 text-slate-400 group-hover:text-emerald-500 group-hover:scale-110 transition-all shadow-sm">
-                <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
-              </div>
-              <h3 className="text-sm md:text-lg font-bold text-slate-500 group-hover:text-slate-900 transition-colors">Lihat Lainnya</h3>
+            {/* Mobile Only "See All" Button */}
+            <div className="col-span-2 md:hidden mt-2">
+              <Button asChild size="lg" className="w-full rounded-full bg-slate-900 text-white hover:bg-slate-800 h-12 text-sm font-semibold shadow-sm">
+                <Link href="/projects">Lihat Semua Portfolio <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              </Button>
             </div>
-            <Link href="/projects" className="absolute inset-0 z-10" aria-label="Lihat Semua Project" />
-          </div>
-
-          {/* Mobile Only "See All" Button */}
-          <div className="col-span-2 md:hidden mt-2">
-            <Button asChild size="lg" className="w-full rounded-full bg-slate-900 text-white hover:bg-slate-800 h-12 text-sm font-semibold shadow-sm">
-              <Link href="/projects">Lihat Semua Portfolio <ArrowRight className="ml-2 w-4 h-4" /></Link>
-            </Button>
           </div>
         </div>
       </section>
 
       {/* CTA SECTION - REFINED BENTO STYLE */}
-      <section className="py-8 md:py-24 bg-white">
+      < section className="py-8 md:py-24 bg-white" >
         <div className="container px-4 mx-auto max-w-7xl">
           <div className="bg-slate-50 rounded-[2rem] md:rounded-[3rem] p-5 md:p-16 lg:p-20 flex flex-col lg:flex-row items-center gap-6 md:gap-12 lg:gap-20 overflow-hidden relative">
 
@@ -531,10 +516,10 @@ export default function Home() {
 
           </div>
         </div>
-      </section>
+      </section >
 
       {/* FOOTER - Minimalist */}
-      <footer id="contact" className="bg-white pt-10 pb-6 md:pt-24 md:pb-12 border-t border-slate-100">
+      < footer id="contact" className="bg-white pt-10 pb-6 md:pt-24 md:pb-12 border-t border-slate-100" >
         <div className="container px-4 mx-auto">
           <div className="grid md:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-20">
             <div className="col-span-1 md:col-span-2 space-y-4 md:space-y-6">
@@ -560,7 +545,11 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center pt-6 md:pt-8 border-t border-slate-100 gap-4 md:gap-0">
-            <p className="text-slate-400 text-[10px] md:text-sm">© 2026 PT. Kid Nusa Gemilang. All rights reserved.</p>
+            <div className="flex flex-col md:flex-row gap-1 md:gap-4 items-center">
+              <p className="text-slate-400 text-[10px] md:text-sm">© 2019-2026 PT. Kid Nusa Gemilang. All rights reserved.</p>
+              <span className="hidden md:block text-slate-300">•</span>
+              <p className="text-slate-400 text-[10px] md:text-sm">Built for Excellence.</p>
+            </div>
             <div className="flex gap-6 md:gap-8">
               <Link href="#" className="text-slate-400 hover:text-emerald-600 transition-colors text-[10px] md:text-sm font-medium">Privacy Policy</Link>
               <Link href="#" className="text-slate-400 hover:text-emerald-600 transition-colors text-[10px] md:text-sm font-medium">Terms of Service</Link>

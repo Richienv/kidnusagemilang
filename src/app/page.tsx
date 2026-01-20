@@ -125,44 +125,71 @@ export default function Home() {
       </section>
 
       {/* WORK PROCESS - "The 3D Metallic Accent Look" */}
-      <section className="py-16 md:py-32 bg-slate-50 relative overflow-hidden">
+      {/* WORK PROCESS - "The Flow of Precision" (OpenAI-inspired Minimalist) */}
+      <section className="py-20 md:py-32 bg-white relative overflow-hidden">
         <div className="container px-4 mx-auto max-w-7xl relative z-10">
-          <div className="text-center mb-10 md:mb-20">
-            <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4 md:mb-6">Alur Kerja Profesional</h2>
-            <p className="text-base md:text-xl text-slate-500 max-w-2xl mx-auto">Standardisasi proses kami menjamin hasil yang presisi dan tepat waktu.</p>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24 gap-8">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
+                Alur Kerja <br /> <span className="text-slate-400">Terintegrasi.</span>
+              </h2>
+              <p className="text-lg text-slate-600 font-light leading-relaxed max-w-xl">
+                Pendekatan sistematis kami memastikan setiap tahap konstruksi tereksekusi dengan presisi, transparansi, dan standar kualitas tertinggi.
+              </p>
+            </div>
+            <div className="hidden md:block">
+              <div className="w-24 h-1 bg-slate-900"></div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
-            {[
-              { id: "01", title: "Konsultasi", desc: "Analisis kebutuhan & survei." },
-              { id: "02", title: "Perencanaan", desc: "Desain teknis & RAB." },
-              { id: "03", title: "Konstruksi", desc: "Eksekusi standar K3." },
-              { id: "04", title: "Serah Terima", desc: "Final inspection & garansi." },
-            ].map((step) => (
-              <div
-                key={step.id}
-                className="group relative rounded-2xl md:rounded-3xl bg-white transition-transform duration-300 hover:-translate-y-2"
-              >
-                {/* 3D METALLIC BORDER EFFECT */}
-                <div className="absolute -inset-[1px] rounded-2xl md:rounded-3xl bg-gradient-to-br from-slate-300 via-emerald-400 to-slate-300 opacity-60 group-hover:opacity-100 blur-[0.5px] transition-opacity duration-500"></div>
+          <div className="relative">
+            {/* Connecting Line (Desktop) */}
+            <div className="hidden md:block absolute top-[2.5rem] left-0 right-0 h-[1px] bg-slate-200 z-0"></div>
 
-                {/* Card Content */}
-                <div className="relative h-full bg-white rounded-[15px] md:rounded-[23px] p-4 md:p-8 shadow-sm group-hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 relative z-10">
+              {[
+                {
+                  id: "01",
+                  title: "Konsultasi & Survei",
+                  titleEn: "Consultation & Survey",
+                  desc: "Analisis mendalam kebutuhan proyek, studi kelayakan, dan survei topografi untuk memastikan fondasi perencanaan yang akurat."
+                },
+                {
+                  id: "02",
+                  title: "Perencanaan Teknis",
+                  titleEn: "Engineering Design",
+                  desc: "Pengembangan blueprint struktural presisi, estimasi biaya (RAB) transparan, dan validasi standar ISO."
+                },
+                {
+                  id: "03",
+                  title: "Eksekusi Konstruksi",
+                  titleEn: "Construction Execution",
+                  desc: "Pengerahan tim ahli dan alat berat dengan manajemen proyek ketat serta kepatuhan penuh pada protokol K3."
+                },
+                {
+                  id: "04",
+                  title: "Quality Control & Serah Terima",
+                  titleEn: "QC & Handover",
+                  desc: "Inspeksi final menyeluruh, pengujian beban, dan serah terima resmi dengan jaminan garansi pemeliharaan."
+                },
+              ].map((step) => (
+                <div key={step.id} className="group flex flex-col items-start relative bg-white md:bg-transparent pt-8 md:pt-0">
+                  {/* Node Point */}
+                  <div className="w-5 h-5 rounded-full bg-white border-[3px] border-slate-900 z-20 mb-6 md:mb-12 group-hover:scale-125 transition-transform duration-300"></div>
 
-                  {/* Metallic Numbering */}
-                  <div className="text-4xl md:text-6xl font-black mb-3 md:mb-6 tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-slate-100" style={{ WebkitTextStroke: "1px rgba(16, 185, 129, 0.4)" }}>
-                    <span className="bg-clip-text text-transparent bg-gradient-to-br from-emerald-500 to-teal-400 drop-shadow-sm">
-                      {step.id}
-                    </span>
-                  </div>
+                  {/* Step Number */}
+                  <div className="font-mono text-xs font-bold text-emerald-600 tracking-widest mb-3">{step.id} // {step.titleEn}</div>
 
-                  <h3 className="text-sm md:text-xl font-bold text-slate-900 mb-2 md:mb-3">{step.title}</h3>
-                  <p className="text-xs md:text-base text-slate-500 leading-relaxed font-light">{step.desc}</p>
-
-                  <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-emerald-100/10 to-white/0 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-500" />
+                  {/* Content */}
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-slate-500 leading-relaxed font-light border-l-2 border-slate-100 pl-4 md:border-none md:pl-0">
+                    {step.desc}
+                  </p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kidnusagemilang.com"), // Base URL for resolving relative OG links
   title: {
     default: "PT. KID NUSA GEMILANG",
     template: "%s | PT. KID NUSA GEMILANG"

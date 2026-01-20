@@ -427,8 +427,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Project Card 4 (Placeholder / More) */}
-          <div className="group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer bg-slate-200 border border-slate-300 flex items-center justify-center md:mt-12 group hover:bg-slate-300 transition-colors">
+          {/* Project Card 4 (Placeholder / More) - Desktop Only */}
+          <div className="hidden md:flex group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer bg-slate-200 border border-slate-300 items-center justify-center md:mt-12 group hover:bg-slate-300 transition-colors">
             <div className="text-center p-2">
               <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center mx-auto mb-2 md:mb-4 text-slate-400 group-hover:text-emerald-500 group-hover:scale-110 transition-all shadow-sm">
                 <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
@@ -436,6 +436,13 @@ export default function Home() {
               <h3 className="text-sm md:text-lg font-bold text-slate-500 group-hover:text-slate-900 transition-colors">Lihat Lainnya</h3>
             </div>
             <Link href="/projects" className="absolute inset-0 z-10" aria-label="Lihat Semua Project" />
+          </div>
+
+          {/* Mobile Only "See All" Button */}
+          <div className="col-span-2 md:hidden mt-2">
+            <Button asChild size="lg" className="w-full rounded-full bg-slate-900 text-white hover:bg-slate-800 h-12 text-sm font-semibold shadow-sm">
+              <Link href="/projects">Lihat Semua Portfolio <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            </Button>
           </div>
         </div>
       </section>

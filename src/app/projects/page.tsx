@@ -68,37 +68,37 @@ export default function ProjectsPage() {
                                 transition={{ duration: 0.3 }}
                                 key={project.id}
                             >
-                                <Card className="group overflow-hidden border-none shadow-sm hover:shadow-xl transition-all duration-300 bg-white h-full flex flex-col">
-                                    <div className="relative h-64 overflow-hidden">
-                                        <Image
-                                            src={project.image}
-                                            alt={project.title}
-                                            fill
-                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                        />
-                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                            <Link href={`/projects/${project.id}`}>
-                                                <Button variant="secondary" className="rounded-full gap-2 pointer-events-none">
+                                <Card className="group overflow-hidden border-none shadow-sm hover:shadow-xl transition-all duration-300 bg-white h-full">
+                                    <Link href={`/projects/${project.id}`} className="flex flex-col h-full">
+                                        <div className="relative h-64 overflow-hidden">
+                                            <Image
+                                                src={project.image}
+                                                alt={project.title}
+                                                fill
+                                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                            />
+                                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                                <div className="inline-flex h-9 items-center justify-center whitespace-nowrap rounded-full bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground shadow-sm hover:bg-secondary/80 gap-2 pointer-events-none">
                                                     Lihat Detail <ArrowUpRight className="w-4 h-4" />
-                                                </Button>
-                                            </Link>
+                                                </div>
+                                            </div>
+                                            <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900 shadow-sm">
+                                                {project.category}
+                                            </div>
                                         </div>
-                                        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900 shadow-sm">
-                                            {project.category}
-                                        </div>
-                                    </div>
-                                    <CardContent className="p-6 flex-1 flex flex-col">
-                                        <div className="flex justify-between items-start mb-2">
-                                            <div className="text-xs text-emerald-600 font-semibold uppercase tracking-wider">{project.location}</div>
-                                            <div className="text-xs text-slate-400 font-mono">{project.year}</div>
-                                        </div>
-                                        <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
-                                            {project.title}
-                                        </h3>
-                                        <p className="text-slate-500 text-sm leading-relaxed mb-4 flex-1">
-                                            {project.desc}
-                                        </p>
-                                    </CardContent>
+                                        <CardContent className="p-6 flex-1 flex flex-col">
+                                            <div className="flex justify-between items-start mb-2">
+                                                <div className="text-xs text-emerald-600 font-semibold uppercase tracking-wider">{project.location}</div>
+                                                <div className="text-xs text-slate-400 font-mono">{project.year}</div>
+                                            </div>
+                                            <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                                                {project.title}
+                                            </h3>
+                                            <p className="text-slate-500 text-sm leading-relaxed mb-4 flex-1">
+                                                {project.desc}
+                                            </p>
+                                        </CardContent>
+                                    </Link>
                                 </Card>
                             </motion.div>
                         ))}

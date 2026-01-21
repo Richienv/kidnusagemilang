@@ -109,7 +109,7 @@ export default function Home() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-slate-200 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
               {[
                 { name: "Kementerian PUPR", icon: Landmark },
-                { name: "Dinas PU Kaltim", icon: Building2 },
+                { name: "Dinas PUPR Kab. Bulungan", icon: Building2 },
                 { name: "Korporasi Tambang", icon: Pickaxe },
                 { name: "Swasta Nasional", icon: Briefcase },
               ].map((partner, i) => (
@@ -532,7 +532,7 @@ export default function Home() {
               <h4 className="font-bold text-sm md:text-base text-slate-900">Kantor</h4>
               <address className="text-slate-500 text-xs md:text-lg not-italic leading-relaxed">
                 Jl. Syarifudin Yoes No. 22<br />
-                Balikpapan Selatan, Kaltim<br />
+                Balikpapan Selatan, Kalimantan Timur<br />
                 Indonesia 76115
               </address>
             </div>

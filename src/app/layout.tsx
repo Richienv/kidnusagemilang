@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google"; // Using Geist as it's modern and clean
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
+import JsonLd from "@/components/json-ld";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,19 +17,19 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://kidnusagemilang.com"), // Base URL for resolving relative OG links
   title: {
-    default: "PT. KID NUSA GEMILANG",
+    default: "PT. KID NUSA GEMILANG | Kontraktor General Kalimantan Utara",
     template: "%s | PT. KID NUSA GEMILANG"
   },
-  description: "General Contractor terpercaya di Indonesia Timur sejak 2019. Spesialis konstruksi jembatan, jalan, dan infrastruktur sipil dengan standar kualitas tinggi.",
-  keywords: ["Kontraktor Jembatan", "Konstruksi Jalan", "Sipil", "Kalimantan", "General Contractor", "Kid Nusa Gemilang"],
+  description: "Kontraktor terpercaya di Kalimantan Utara & Bulungan. Spesialis konstruksi jembatan, jalan, dan infrastruktur sipil dengan standar ISO. Partner resmi pemerintah & swasta.",
+  keywords: ["Kontraktor Kalimantan Utara", "Jasa Konstruksi Bulungan", "Kontraktor Jembatan", "Konstruksi Jalan", "Sipil", "Tanjung Selor", "General Contractor", "Kid Nusa Gemilang", "Dinas PUPR"],
   authors: [{ name: "PT. Kid Nusa Gemilang" }],
   creator: "PT. Kid Nusa Gemilang",
   openGraph: {
     type: "website",
     locale: "id_ID",
     url: "https://kidnusagemilang.com",
-    title: "PT. KID NUSA GEMILANG | Membangun Indonesia",
-    description: "Partner konstruksi terpercaya untuk pembangunan infrastruktur jembatan dan jalan di Indonesia.",
+    title: "PT. KID NUSA GEMILANG | Kontraktor Terbaik Kalimantan Utara",
+    description: "Partner konstruksi terpercaya untuk pembangunan infrastruktur jembatan dan jalan di Kalimantan Utara, Bulungan, dan sekitarnya.",
     siteName: "PT. KID NUSA GEMILANG",
     images: [
       {
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "PT. KID NUSA GEMILANG",
-    description: "Membangun Indonesia dari Pelosok Negeri.",
+    description: "Membangun Infrastruktur Handal dari Kalimantan Utara untuk Indonesia.",
     images: ["/opengraph-image.png"],
     creator: "@kidnusagemilang",
   },
@@ -67,6 +68,7 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
+        <JsonLd />
       </body>
     </html>
   );

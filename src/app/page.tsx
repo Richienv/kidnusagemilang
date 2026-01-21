@@ -435,15 +435,7 @@ export default function Home() {
               ))}
 
               {/* Project Card (See All) - Desktop Only */}
-              <div className="hidden md:flex group relative aspect-square md:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer bg-slate-100 border border-slate-200 items-center justify-center md:mt-12 hover:bg-slate-200/50 hover:border-slate-300 transition-all duration-300">
-                <div className="text-center p-2">
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white border border-slate-100 flex items-center justify-center mx-auto mb-4 text-slate-400 group-hover:text-emerald-600 group-hover:scale-110 shadow-sm transition-all duration-500">
-                    <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
-                  </div>
-                  <h3 className="text-sm md:text-base font-bold text-slate-500 group-hover:text-slate-900 transition-colors tracking-tight">View All Projects</h3>
-                </div>
-                <Link href="/projects" className="absolute inset-0 z-10" aria-label="Lihat Semua Project" />
-              </div>
+
             </div>
 
             {/* Mobile Only "See All" Button */}

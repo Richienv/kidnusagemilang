@@ -10,65 +10,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
-// Project Data
-const projects = [
-    {
-        id: 1,
-        title: "Jembatan Terusan Salimbatu",
-        category: "Jembatan",
-        location: "Kalimantan Utara",
-        year: "2025",
-        image: "/assets/hero-gen-bridge.png",
-        desc: "Pembangunan jembatan gantung vital penghubung desa terisolir."
-    },
-    {
-        id: 2,
-        title: "Infrastruktur Teras Baru",
-        category: "Jalan",
-        location: "Bulungan",
-        year: "2024",
-        image: "/assets/hero-gen-road.png",
-        desc: "Peningkatan kualitas jalan dan sistem drainase lingkungan."
-    },
-    {
-        id: 3,
-        title: "Supply Rangka Bailey",
-        category: "Sipil",
-        location: "Kalimantan Timur",
-        year: "2024",
-        image: "/assets/project-belly.png",
-        desc: "Pengadaan dan pemasangan rangka baja jembatan darurat."
-    },
-    {
-        id: 4,
-        title: "Jembatan Sei Kayan",
-        category: "Jembatan",
-        location: "Tanjung Selor",
-        year: "2023",
-        image: "/assets/project-sei-kayan.png",
-        desc: "Konstruksi jembatan bentang panjang rangka baja."
-    },
-    {
-        id: 5,
-        title: "Akses Jalan Tambang",
-        category: "Jalan",
-        location: "Berau",
-        year: "2023",
-        image: "/assets/project-jalan-tambang.png",
-        desc: "Pengerasan dan stabilisasi tanah untuk akses alat berat."
-    },
-    {
-        id: 6,
-        title: "Kantor Operasional Site",
-        category: "Sipil",
-        location: "Balikpapan",
-        year: "2022",
-        image: "/assets/project-site-office.png",
-        desc: "Pembangunan fasilitas kantor lapangan semi-permanen."
-    }
-]
+import { projects, categories } from "@/lib/data"
 
-const categories = ["Semua", "Jembatan", "Jalan", "Sipil"]
+
 
 export default function ProjectsPage() {
     const [filter, setFilter] = useState("Semua")
@@ -133,9 +77,11 @@ export default function ProjectsPage() {
                                             className="object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                            <Button variant="secondary" className="rounded-full gap-2">
-                                                Lihat Detail <ArrowUpRight className="w-4 h-4" />
-                                            </Button>
+                                            <Link href={`/projects/${project.id}`}>
+                                                <Button variant="secondary" className="rounded-full gap-2 pointer-events-none">
+                                                    Lihat Detail <ArrowUpRight className="w-4 h-4" />
+                                                </Button>
+                                            </Link>
                                         </div>
                                         <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900 shadow-sm">
                                             {project.category}
